@@ -1,6 +1,6 @@
 #! /bin/bash
 
-cd gitlab
+cd gitlab-docker
 sh ./startup.sh
 
 cd ../
