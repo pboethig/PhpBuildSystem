@@ -1,5 +1,7 @@
 #! /bin/bash
 
+clear
+
 cd gitlab-docker
 sh ./startup.sh
 
