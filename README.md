@@ -1,4 +1,4 @@
-# Builsystem enviroment
+# Buildsystem enviroment
 
 ## components
 
@@ -7,11 +7,13 @@
   - http://localhost:10080
   - username: admin@gitlabsample.com / gitlabadmin
 
+# Buildsystem
 - Jenkins 2.0
   - http://localhost:8081
   - username: admin / admin
   - Build your projects, run tests , package them and deploy your application
 
+# Artifactmanager
 - Sonar Nexus Repository Manager OSS 2.13.0-0: 
   - http://localhost:8082
   - username: admin / admin
