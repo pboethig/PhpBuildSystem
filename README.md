@@ -1,9 +1,11 @@
 # Buildsystem enviroment
 
-We want to use a complete Applicationstack for our Buildsystem enviroments.
-- Following components are used for the different approaches:
+###We want to use a complete Applicationstack for our Buildsystem enviroments.
+
 - Feel free to secure, configure, link or mod these base app installations.
 - In upcomming taks we will setup a sample php project including code cobverage, dry check, codesniff , phpunit, packagin, releasing and autodeploing deploying.
+
+##Following components are used for the different approaches:
 
 
 
