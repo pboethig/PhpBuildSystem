@@ -10,3 +10,6 @@ cd ../
 cd jenkins
 sh ./startup.sh
 
+cd ../
+cd docker-nexus
+sh ./startup.sh
