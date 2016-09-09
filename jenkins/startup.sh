@@ -16,5 +16,3 @@ echo  "${green}#  Windows / Mac Users can use: ${yellow} http://<docker-machine-
 echo  "${green}######################################################################${reset}"
 
 docker exec -it jenkins_jenkins_1 /var/lib/jenkins/startup.sh
-
-exit 0
