@@ -14,3 +14,7 @@ echo  "${green}#################################################################
 echo  "${green}#  You can surf jenkins under : ${yellow} http://localhost:8081 ${green}now           #"
 echo  "${green}#  Windows / Mac Users can use: ${yellow} http://<docker-machine-ip>:8081 ${green}now #"
 echo  "${green}######################################################################${reset}"
+
+docker exec -it jenkins_jenkins_1 /var/lib/jenkins/startup.sh
+
+exit 0

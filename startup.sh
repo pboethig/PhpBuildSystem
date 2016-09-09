@@ -1,15 +1,22 @@
 #! /bin/bash
 
 clear
-
+###################################################
+# gitlab
 cd gitlab-docker
 sh ./startup.sh
 
 cd ../
 
+###################################################
+# jenkins
+
 cd jenkins
 sh ./startup.sh
 
+###################################################
+# nexus
+
 cd ../
-cd docker-nexus
+cd nexus
 sh ./startup.sh
