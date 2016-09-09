@@ -1,7 +1,3 @@
-docker-compose up --build -d 
-
-echo 'On Windows and Mac http://<docker-machine ip>:8081'
-
 red=`tput setaf 1`
 green=`tput setaf 2`
 reset=`tput sgr0`
