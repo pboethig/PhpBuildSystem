@@ -1,0 +1,3 @@
+[submodule "docker-selenium"]
+	path = docker-selenium
+	url = https://github.com/SeleniumHQ/docker-selenium.git
