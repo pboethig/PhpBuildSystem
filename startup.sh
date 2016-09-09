@@ -21,6 +21,13 @@ cd ../
 cd nexus
 sh ./startup.sh
 
+###################################################
+# selenium
+cd ../
+cd submodules/selenium/
+sh startup.sh
+
+
 red=`tput setaf 1`
 green=`tput setaf 2`
 reset=`tput sgr0`
