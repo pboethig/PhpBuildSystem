@@ -1,0 +1,3 @@
+[submodule "submodules/selenium/elgalu-docker-selenium"]
+	path = submodules/selenium/elgalu-docker-selenium
+	url = https://github.com/elgalu/docker-selenium.git
