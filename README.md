@@ -11,7 +11,7 @@
 ## Versioncontrol
 - GitLab Community Edition 8.11.4 b871b76
   - http://localhost:10080
-  - username: admin@gitlabsample.com / gitlabadmin
+  - you have to set a passowrd for user : root
 
 ## Buildsystem
 - Jenkins 2.0
