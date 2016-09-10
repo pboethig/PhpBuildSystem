@@ -33,6 +33,10 @@
 
 # Installation
 
-Just clone the project and run the startup.sh
+##Just clone the projectrecursiv to get the submodules
+ - git clone --recursive https://github.com/pboethig/buisystem.git
+
+and run the startup.sh
+
 The links to the application are displayed on the console after successfull installation
 
