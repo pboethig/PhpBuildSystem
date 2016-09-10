@@ -6,12 +6,12 @@ clear
 cd submodules/git/
 sudo sh ./startup.sh
 
-cd ../../
-
 ###################################################
 # jenkins
 
-cd jenkins
+cd ../
+cd jenkins/docker-jenkins
+
 sudo chmod a+x startup.sh
 sudo sh ./startup.sh
 
@@ -19,8 +19,7 @@ sudo sh ./startup.sh
 # nexus
 
 cd ../
-
-cd submodules/nexus
+cd nexus
 
 sudo rm -rf docker-nexus/docker-compose.yml
 sudo cp -fr docker-compose.yml docker-nexus
@@ -29,12 +28,11 @@ sudo sh ./startup.sh
 
 ###################################################
 # selenium
-cd ../../
-cd submodules/selenium/
+cd ../
+cd selenium/
 
 sudo chmod a+x startup.sh
 sudo sh startup.sh
-
 
 red=`tput setaf 1`
 green=`tput setaf 2`
