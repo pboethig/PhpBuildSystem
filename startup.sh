@@ -3,7 +3,7 @@
 clear
 ###################################################
 # gitlab
-cd gitlab-docker
+cd submodules/git/
 sh ./startup.sh
 
 cd ../
@@ -12,6 +12,7 @@ cd ../
 # jenkins
 
 cd jenkins
+chmod a+x startup.sh
 sh ./startup.sh
 
 ###################################################
@@ -19,12 +20,15 @@ sh ./startup.sh
 
 cd ../
 cd nexus
+chmod a+x startup.sh
 sh ./startup.sh
 
 ###################################################
 # selenium
 cd ../
 cd submodules/selenium/
+
+chmod a+x startup.sh
 sh startup.sh
 
 
