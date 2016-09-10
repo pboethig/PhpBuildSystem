@@ -39,7 +39,7 @@ yellow=`tput setaf 3`
 
 echo  "${yellow}Summary:"
 echo  "${green}######################################################################"
-echo  "${green}   You can surf nexus under : ${yellow} http://localhost:10080 ${green}now              "
+echo  "${green}   You can surf gitlab under : ${yellow} http://localhost:10080 ${green}now              "
 echo  "${green}   Windows / Mac Users can use: ${yellow} http://<docker-machine-ip>:10080 ${green}now  "
 
 echo  "                                                                                               "
@@ -47,7 +47,7 @@ echo  "${green}   You can surf jenkins under : ${yellow} http://localhost:8081 $
 echo  "${green}   Windows / Mac Users can use: ${yellow} http://<docker-machine-ip>:8081 ${green}now  "
 
 echo  "                                                                                               "
-echo  "${green}   You can surf gitlab under : ${yellow} http://localhost:8082 ${green}now               "
+echo  "${green}   You can surf nexus under : ${yellow} http://localhost:8082 ${green}now               "
 echo  "${green}   Windows / Mac Users can use: ${yellow} http://<docker-machine-ip>:8082 ${green}now "
 
 echo  ""
