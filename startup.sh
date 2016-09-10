@@ -4,7 +4,7 @@ clear
 ###################################################
 # gitlab
 cd submodules/git/
-sh ./startup.sh
+sudo sh ./startup.sh
 
 cd ../../
 
@@ -12,24 +12,28 @@ cd ../../
 # jenkins
 
 cd jenkins
-chmod a+x startup.sh
-sh ./startup.sh
+sudo chmod a+x startup.sh
+sudo sh ./startup.sh
 
 ###################################################
 # nexus
 
 cd ../
+
 cd submodules/nexus
-chmod a+x startup.sh
-sh ./startup.sh
+
+sudo rm -rf docker-nexus/docker-compose.yml
+sudo cp -fr docker-compose.yml docker-nexus
+sudo chmod a+x startup.sh
+sudo sh ./startup.sh
 
 ###################################################
 # selenium
 cd ../../
 cd submodules/selenium/
 
-chmod a+x startup.sh
-sh startup.sh
+sudo chmod a+x startup.sh
+sudo sh startup.sh
 
 
 red=`tput setaf 1`
