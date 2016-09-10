@@ -17,8 +17,7 @@ sudo sh ./startup.sh
 
 ###################################################
 # nexus
-
-cd ../
+cd ../../
 cd nexus
 
 sudo rm -rf docker-nexus/docker-compose.yml
