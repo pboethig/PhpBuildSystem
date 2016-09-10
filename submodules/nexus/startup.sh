@@ -4,7 +4,7 @@ reset=`tput sgr0`
 yellow=`tput setaf 3`
 
 echo "${green}Starting nexus service${reset}"
-
+cd docker-nexus
 docker-compose up --build -d 
 
 echo  "${green}######################################################################"

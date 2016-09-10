@@ -6,7 +6,7 @@ clear
 cd submodules/git/
 sh ./startup.sh
 
-cd ../
+cd ../../
 
 ###################################################
 # jenkins
@@ -19,13 +19,13 @@ sh ./startup.sh
 # nexus
 
 cd ../
-cd nexus
+cd submodules/nexus
 chmod a+x startup.sh
 sh ./startup.sh
 
 ###################################################
 # selenium
-cd ../
+cd ../../
 cd submodules/selenium/
 
 chmod a+x startup.sh

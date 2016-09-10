@@ -4,3 +4,6 @@
 [submodule "submodules/git/docker-gitlab"]
 	path = submodules/git/docker-gitlab
 	url = https://github.com/sameersbn/docker-gitlab
+[submodule "submodules/nexus/docker-nexus"]
+	path = submodules/nexus/docker-nexus
+	url = https://github.com/sonatype/docker-nexus
