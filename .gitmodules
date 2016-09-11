@@ -1,6 +1,3 @@
-[submodule "submodules/selenium/elgalu-docker-selenium"]
-	path = submodules/selenium/elgalu-docker-selenium
-	url = https://github.com/elgalu/docker-selenium.git
 [submodule "submodules/git/docker-gitlab"]
 	path = submodules/git/docker-gitlab
 	url = https://github.com/sameersbn/docker-gitlab
