@@ -6,15 +6,6 @@ clear
 cd submodules/git/
 sudo sh ./startup.sh
 
-
-##################################################
-# selenium
-cd ../
-cd selenium/
-
-sudo chmod a+x startup.sh
-sudo sh startup.sh
-
 red=`tput setaf 1`
 green=`tput setaf 2`
 reset=`tput sgr0`
