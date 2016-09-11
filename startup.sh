@@ -12,7 +12,7 @@ reset=`tput sgr0`
 yellow=`tput setaf 3`
 
 echo  "${yellow}Summary:"
-echo  "${green}######################################################################"
+echo  "${green}##########################################################################################"
 echo  "${green}   You can surf gitlab under : ${yellow} http://localhost:10080 ${green}now              "
 echo  "${green}   Windows / Mac Users can use: ${yellow} http://<docker-machine-ip>:10080 ${green}now  "
 
@@ -39,4 +39,4 @@ echo  "${green}   Selenium Hub Url: http://<docker-machine-ip>:4444/wd/hub"
 echo  ""
 echo  "${green}   Windows / Mac Users can use: ${yellow} http://<docker-machine-ip>:444/grid/console ${green}now "
 
-echo  "${green}######################################################################${reset}"
+echo  "${green}##########################################################################################${reset}"
