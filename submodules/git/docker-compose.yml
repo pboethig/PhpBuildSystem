@@ -1,10 +1,18 @@
 version: '2'
 
 services:
+  nexus:
+      image: sonatype/nexus
+      volumes:
+        - "nexus-data:/sonatype-work"
+      ports:
+        - "8082:8081"
   jenkins:
       build: 
         context: .
         dockerfile: jenkins.dockerfile
+      ports: 
+        - "8081:8080"  
   redis:
     restart: always
     image: sameersbn/redis:latest
@@ -152,3 +160,5 @@ services:
     - OAUTH_AZURE_API_KEY=
     - OAUTH_AZURE_API_SECRET=
     - OAUTH_AZURE_TENANT_ID=
+volumes:
+  nexus-data: {}
