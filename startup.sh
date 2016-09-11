@@ -6,6 +6,18 @@ clear
 cd submodules/git/
 sudo sh ./startup.sh
 
+
+###################################################
+# nexus
+cd ../
+cd nexus
+
+sudo rm -rf docker-nexus/docker-compose.yml
+sudo cp -fr docker-compose.yml docker-nexus
+sudo chmod a+x startup.sh
+sudo sh ./startup.sh
+
+
 ###################################################
 # jenkins
 
@@ -15,17 +27,7 @@ cd jenkins/docker-jenkins
 sudo chmod a+x startup.sh
 sudo sh ./startup.sh
 
-###################################################
-# nexus
-cd ../../
-cd nexus
-
-sudo rm -rf docker-nexus/docker-compose.yml
-sudo cp -fr docker-compose.yml docker-nexus
-sudo chmod a+x startup.sh
-sudo sh ./startup.sh
-
-###################################################
+##################################################
 # selenium
 cd ../
 cd selenium/

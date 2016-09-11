@@ -7,6 +7,8 @@ yellow=`tput setaf 3`
 
 echo "${green}Starting gitlab installation${reset}"
 
+sudo cp -fr docker-compose.yml docker-gitlab
+
 cd docker-gitlab
 docker-compose up --build -d 
 echo  "${green}##########################################################"
