@@ -12,3 +12,5 @@ sudo cp -fr jenkins.dockerfile docker-gitlab
 
 cd docker-gitlab
 docker-compose up --build -d 
+
+docker exec -it dockergitlab_jenkins_1 /var/lib/jenkins/startup.sh

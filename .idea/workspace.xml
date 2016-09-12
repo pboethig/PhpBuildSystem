@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="523b18c7-8a12-4363-b071-2b2c8ff6f435" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submodules/git/docker-gitlab" afterPath="$PROJECT_DIR$/submodules/git/docker-gitlab" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submodules/selenium/elgalu-docker-selenium" afterPath="$PROJECT_DIR$/submodules/selenium/elgalu-docker-selenium" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submodules/git/docker-compose.yml" afterPath="$PROJECT_DIR$/submodules/git/docker-compose.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submodules/git/startup.sh" afterPath="$PROJECT_DIR$/submodules/git/startup.sh" />
-    </list>
+    <list default="true" id="523b18c7-8a12-4363-b071-2b2c8ff6f435" name="Default" comment="" />
     <ignored path="builsystem.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -44,6 +38,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7" />
   <component name="ProjectFrameBounds">
@@ -166,6 +163,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="523b18c7-8a12-4363-b071-2b2c8ff6f435" name="Default" comment="" />
@@ -202,6 +202,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
