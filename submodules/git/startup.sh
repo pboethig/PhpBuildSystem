@@ -21,4 +21,4 @@ docker-compose up --build -d
 docker exec -it dockergitlab_jenkins_1 /var/lib/jenkins/startup.sh
 
 #start apache / mysql
-docker exec -it dockergitlab_webserver_1 bash
+docker exec -it  dockergitlab_webserver_1 /run_lamp.sh
