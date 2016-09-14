@@ -2,9 +2,7 @@ version: '2'
 
 services:
   webserver:
-    build: 
-      context: .
-      dockerfile: lamp.dockerfile
+    image: mittax/lamp 
     ports:
       - 8083:80 
     volumes:

@@ -12,7 +12,8 @@ sudo cp -fr jenkins.dockerfile docker-gitlab
 sudo cp -fr lamp.dockerfile docker-gitlab
 sudo cp -fr run_lamp.sh docker-gitlab
 sudo cp -fr webslave docker-gitlab
-
+sudo cp -fr slave.jar docker-gitlab
+sudo cp -fr startSlave.sh docker-gitlab
 
 cd docker-gitlab
 docker-compose up --build -d 
