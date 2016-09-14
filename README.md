@@ -25,6 +25,8 @@
   - username: admin / admin
   - Its the artifactmanager to store releases and 3rdparty libs
 
+## LAMP Webslave
+  - a LAMP Server which acts as a jenkins slave for auto deployments
 
 # Prerequesits
 - Docker running (Linux or Mac or Windows)
