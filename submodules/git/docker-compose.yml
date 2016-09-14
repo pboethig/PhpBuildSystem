@@ -1,6 +1,14 @@
 version: '2'
 
 services:
+  webserver:
+    build: 
+      context: .
+      dockerfile: lamp.dockerfile
+    ports:
+      - 8083:80 
+    volumes:
+      - ./webslave/www/:/var/www/example.com/public_html/   
   hub:
     image: elgalu/selenium
     ports:

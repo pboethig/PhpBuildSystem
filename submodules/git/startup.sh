@@ -9,6 +9,10 @@ echo "${green}Starting gitlab installation${reset}"
 
 sudo cp -fr docker-compose.yml docker-gitlab
 sudo cp -fr jenkins.dockerfile docker-gitlab
+sudo cp -fr lamp.dockerfile docker-gitlab
+sudo cp -fr run_lamp.sh docker-gitlab
+sudo cp -fr webslave docker-gitlab
+
 
 cd docker-gitlab
 docker-compose up --build -d 
