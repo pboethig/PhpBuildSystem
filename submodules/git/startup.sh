@@ -20,5 +20,13 @@ docker-compose up --build -d
 # start jenkins
 docker exec -it dockergitlab_jenkins_1 /var/lib/jenkins/startup.sh
 
+
+# start jenkins slave
+
+echo "${green}Startink jenkins slave dockergitlab_webserver_1 /usr/local/jenkins/startSlave.sh  ${reset}"
+docker exec -it  dockergitlab_webserver_1 /usr/local/jenkins/startSlave.sh
+
+
 #start apache / mysql
 docker exec -it  dockergitlab_webserver_1 /run_lamp.sh
+

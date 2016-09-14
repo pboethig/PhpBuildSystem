@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-service apache2 start
-service mysql start
+nohup service apache2 start &
+nohup service mysql start &
 
-exit
+tail -f /dev/null
