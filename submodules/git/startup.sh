@@ -17,4 +17,8 @@ sudo cp -fr webslave docker-gitlab
 cd docker-gitlab
 docker-compose up --build -d 
 
+# start jenkins
 docker exec -it dockergitlab_jenkins_1 /var/lib/jenkins/startup.sh
+
+#start apache / mysql
+docker exec -it dockergitlab_webserver_1 bash
