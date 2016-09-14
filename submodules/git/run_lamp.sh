@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-# nohup service apache2 start &
-# nohup service mysql start &
+cd /usr/local/jenkins
+sh ./startSlave.sh
 
-#tail -f /dev/null &
+nohup service apache2 start &
+nohup service mysql start &
+
+nohup tail -f /dev/null &

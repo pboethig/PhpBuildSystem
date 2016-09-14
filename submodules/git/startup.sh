@@ -25,7 +25,7 @@ docker exec -it dockergitlab_jenkins_1 /var/lib/jenkins/startup.sh
 # start jenkins slave
 
 echo "${green}Startink jenkins slave dockergitlab_webserver_1 /usr/local/jenkins/startSlave.sh  ${reset}"
-docker exec -it  dockergitlab_webserver_1 /usr/local/jenkins/startSlave.sh
+docker exec -it  dockergitlab_webserver_1 nohup java -jar slave.jar -jnlpUrl http://dockergitlab_jenkins_1:8080/computer/dockergitlab_webserver_1/slave-agent.jnlp &
 
 
 #start apache / mysql
