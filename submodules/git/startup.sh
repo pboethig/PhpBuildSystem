@@ -12,7 +12,7 @@ sudo cp -fr jenkins.dockerfile docker-gitlab
 sudo cp -fr lamp.dockerfile docker-gitlab
 sudo cp -fr slave.jar docker-gitlab
 sudo cp -fr startSlave.sh docker-gitlab
-sudo cp -fr docker-php/* docker-gitlab
+sudo cp -fr php/* docker-gitlab
 
 cd docker-gitlab
 docker-compose up --build -d 
