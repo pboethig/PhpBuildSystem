@@ -3,8 +3,8 @@ version: '2'
 services:
   webserver:
     build: 
-      context: .
-      dockerfile: lamp.dockerfile
+        context: .
+        dockerfile: lamp.dockerfile
     ports:
       - "8083:80"
       - "443:443"
