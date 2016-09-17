@@ -4,7 +4,7 @@ clear
 ###################################################
 # gitlab
 cd submodules/git/
-sudo sh ./startup.sh
+sh ./startup.sh
 
 red=`tput setaf 1`
 green=`tput setaf 2`

@@ -7,12 +7,12 @@ yellow=`tput setaf 3`
 
 echo "${green}Starting gitlab installation${reset}"
 
-sudo cp -fr docker-compose.yml docker-gitlab
-sudo cp -fr jenkins.dockerfile docker-gitlab
-sudo cp -fr php/* docker-gitlab
-sudo cp -fr lamp.dockerfile docker-gitlab
-sudo cp -fr slave.jar docker-gitlab
-sudo cp -fr startSlave.sh docker-gitlab
+cp -fr docker-compose.yml docker-gitlab
+cp -fr jenkins.dockerfile docker-gitlab
+cp -fr php/* docker-gitlab
+cp -fr lamp.dockerfile docker-gitlab
+cp -fr slave.jar docker-gitlab
+cp -fr startSlave.sh docker-gitlab
 
 
 cd docker-gitlab
