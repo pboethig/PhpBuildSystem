@@ -20,7 +20,11 @@ docker-compose up --build -d
 echo  "${green}##########################################################################################"
 echo  "${green}waiting for jenkins to start slaves : ${reset}              "
 
-while ! curl http://localhost:8081/ >>/dev/null
+JENKINSURL=`docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' dockergitlab_jenkins_1`:8080
+
+echo $JENKINSURL
+
+while ! curl $JENKINSURL  >>/dev/null
 do
   echo "$(date) - still trying"
   sleep 1
