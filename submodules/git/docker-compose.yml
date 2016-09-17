@@ -1,7 +1,27 @@
 version: '2'
 
 services: 
+  ##########################################################################
+  # Jenkins cluster
+  # Jenkins mounts a predefined data volume container with baseplugins, a slave config for the webserver and a testproject
+  jenkinsdata:
+      restart: always
+      image: mittax/jenkins-data
+
+  jenkins:
+      restart: always
+      build: 
+        context: .
+        dockerfile: jenkins.dockerfile
+      ports:
+        - "8081:8080"
+      volumes_from:
+        - jenkinsdata    
+  
+  ##################################################################################
+  # Selenium hub
   hub:
+    restart: always
     image: elgalu/selenium
     ports:
       - "4444:4444"
@@ -19,6 +39,7 @@ services:
       - FIREFOX=false
 
   chrome:
+    restart: always
     image: elgalu/selenium
     network_mode: "service:hub"
     shm_size: 1g
@@ -39,6 +60,7 @@ services:
       - FIREFOX=false
 
   firefox:
+    restart: always
     image: elgalu/selenium
     network_mode: "service:hub"
     mem_limit: 2g
@@ -58,24 +80,27 @@ services:
       - FIREFOX=true
 
   mock:
+    restart: always
     image: elgalu/google_adwords_mock
     network_mode: "service:hub"
     tty: true
     environment:
       - MOCK_SERVER_PORT=8080
 
+  #########################################################################
+  # Sona Nexus     
   nexus:
+      restart: always
       image: sonatype/nexus
       volumes:
         - "nexus-data:/sonatype-work"
       ports:
         - "8082:8081"
-  jenkins:
-      build: 
-        context: .
-        dockerfile: jenkins.dockerfile
-      ports: 
-        - "8081:8080"  
+  
+  
+  ##########################################################################
+  # LAMP Stack
+  # Lampstack containes 
   redis:
     restart: always
     image: sameersbn/redis:latest
@@ -96,6 +121,7 @@ services:
     - DB_EXTENSION=pg_trgm
 
   webserver:
+    restart: always
     build: 
       context: .
       dockerfile: lamp.dockerfile
@@ -107,7 +133,8 @@ services:
       - ./www:/var/www
       - ./sites:/etc/nginx/conf.d
       - ./logs:/var/log/supervisor
-  mysql: 
+  mysql:
+    restart: always 
     image: mysql
     ports:
       - "3307:3306"
@@ -115,32 +142,39 @@ services:
       MYSQL_ROOT_PASSWORD: password
 
   mongo:
+    restart: always
     image: mongo
     ports:
       - "27017:27017"
 
   memcached:
+    restart: always
     image: memcached
     ports:
       - "11211:11211"
 
   redis:
+    restart: always
     image: redis
     ports:
       - "6379:6379"
 
   elasticsearch:
+    restart: always
     image: elasticsearch
     ports:
       - "9200:9200"
       - "9300:9300"
 
   rabbitmq:
+    restart: always
     image: rabbitmq:3.6.1-management
     ports:
       - "15672:15672"
       - "5672:5672"
 
+  ################################################################################
+  # GITLAB    
   gitlab:
     restart: always
     image: sameersbn/gitlab:8.11.5
