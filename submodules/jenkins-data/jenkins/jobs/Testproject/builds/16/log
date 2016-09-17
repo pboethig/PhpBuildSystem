@@ -1,0 +1,193 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/Testproject
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git # timeout=10
+Fetching upstream changes from http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username gitlabadmin # timeout=10
+ > git config --local credential.helper store --file=/tmp/git2859887918106686314.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 0cf4a0733dabc86304131316ca21ed0751f85fbb (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0cf4a0733dabc86304131316ca21ed0751f85fbb
+ > git rev-list 0cf4a0733dabc86304131316ca21ed0751f85fbb # timeout=10
+[Testproject] $ /bin/sh -xe /tmp/hudson6889515393474044761.sh
++ /usr/local/bin/composer.phar install
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
++ sudo ant REPORT
+Buildfile: /var/lib/jenkins/workspace/Testproject/build.xml
+
+init:
+
+Lint:
+    [apply] No syntax errors detected in /var/lib/jenkins/workspace/Testproject/src/Math.php
+
+PHPUnit:
+     [exec] PHPUnit 5.5.4 by Sebastian Bergmann and contributors.
+     [exec] 
+     [exec] .                                                                   1 / 1 (100%)
+     [exec] 
+     [exec] Time: 15 ms, Memory: 4.00MB
+     [exec] 
+     [exec] OK (1 test, 1 assertion)
+
+TEST:
+
+phploc:
+     [exec] phploc 3.0.0 by Sebastian Bergmann.
+     [exec] 
+     [exec] Size
+     [exec]   Lines of Code (LOC)                               15
+     [exec]   Comment Lines of Code (CLOC)                       0 (0.00%)
+     [exec]   Non-Comment Lines of Code (NCLOC)                 15 (100.00%)
+     [exec]   Logical Lines of Code (LLOC)                       3 (20.00%)
+     [exec]     Classes                                          2 (66.67%)
+     [exec]       Average Class Length                           2
+     [exec]         Minimum Class Length                         2
+     [exec]         Maximum Class Length                         2
+     [exec]       Average Method Length                          1
+     [exec]         Minimum Method Length                        1
+     [exec]         Maximum Method Length                        1
+     [exec]     Functions                                        0 (0.00%)
+     [exec]       Average Function Length                        0
+     [exec]     Not in classes or functions                      1 (33.33%)
+     [exec] 
+     [exec] Cyclomatic Complexity
+     [exec]   Average Complexity per LLOC                     0.00
+     [exec]   Average Complexity per Class                    1.00
+     [exec]     Minimum Class Complexity                      1.00
+     [exec]     Maximum Class Complexity                      1.00
+     [exec]   Average Complexity per Method                   1.00
+     [exec]     Minimum Method Complexity                     1.00
+     [exec]     Maximum Method Complexity                     1.00
+     [exec] 
+     [exec] Dependencies
+     [exec]   Global Accesses                                    0
+     [exec]     Global Constants                                 0 (0.00%)
+     [exec]     Global Variables                                 0 (0.00%)
+     [exec]     Super-Global Variables                           0 (0.00%)
+     [exec]   Attribute Accesses                                 1
+     [exec]     Non-Static                                       1 (100.00%)
+     [exec]     Static                                           0 (0.00%)
+     [exec]   Method Calls                                       0
+     [exec]     Non-Static                                       0 (0.00%)
+     [exec]     Static                                           0 (0.00%)
+     [exec] 
+     [exec] Structure
+     [exec]   Namespaces                                         1
+     [exec]   Interfaces                                         0
+     [exec]   Traits                                             0
+     [exec]   Classes                                            1
+     [exec]     Abstract Classes                                 0 (0.00%)
+     [exec]     Concrete Classes                                 1 (100.00%)
+     [exec]   Methods                                            2
+     [exec]     Scope
+     [exec]       Non-Static Methods                             2 (100.00%)
+     [exec]       Static Methods                                 0 (0.00%)
+     [exec]     Visibility
+     [exec]       Public Methods                                 2 (100.00%)
+     [exec]       Non-Public Methods                             0 (0.00%)
+     [exec]   Functions                                          0
+     [exec]     Named Functions                                  0 (0.00%)
+     [exec]     Anonymous Functions                              0 (0.00%)
+     [exec]   Constants                                          0
+     [exec]     Global Constants                                 0 (0.00%)
+     [exec]     Class Constants                                  0 (0.00%)
+     [exec] 
+     [exec] Tests
+     [exec]   Classes                                            0
+     [exec]   Methods                                            0
+
+phpcs:
+     [exec] Time: 17ms; Memory: 4Mb
+     [exec] 
+     [exec] Result: 1
+
+pdepend:
+     [exec] PDepend @package_version@
+     [exec] 
+     [exec] Parsing source files:
+     [exec] .                                                                1
+     [exec] 
+     [exec] Calculating Dependency metrics:
+     [exec]                                                                  4
+     [exec] 
+     [exec] Calculating Coupling metrics:
+     [exec]                                                                  5
+     [exec] 
+     [exec] Calculating Cyclomatic Complexity metrics:
+     [exec]                                                                  5
+     [exec] 
+     [exec] Calculating Inheritance metrics:
+     [exec]                                                                  2
+     [exec] 
+     [exec] Calculating Node Count metrics:
+     [exec]                                                                  4
+     [exec] 
+     [exec] Calculating Node Loc metrics:
+     [exec]                                                                  5
+     [exec] 
+     [exec] Generating pdepend log files, this may take a moment.
+     [exec] 
+     [exec] Time: 0:00:00; Memory: 6.00Mb
+
+phpmd:
+     [exec] <?xml version="1.0" encoding="UTF-8" ?>
+     [exec] <pmd version="@project.version@" timestamp="2016-09-12T20:37:00+00:00">
+     [exec]   <file name="/var/lib/jenkins/workspace/Testproject/src/Math.php">
+     [exec]     <violation beginline="12" endline="12" rule="ShortVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable" priority="3">
+     [exec]       Avoid variables with short names like $x. Configured minimum length is 3.
+     [exec]     </violation>
+     [exec]     <violation beginline="12" endline="12" rule="ShortVariable" ruleset="Naming Rules" externalInfoUrl="http://phpmd.org/rules/naming.html#shortvariable" priority="3">
+     [exec]       Avoid variables with short names like $y. Configured minimum length is 3.
+     [exec]     </violation>
+     [exec]   </file>
+     [exec] </pmd>
+     [exec] Result: 2
+
+phpcpd:
+     [exec] phpcpd 2.0.2 by Sebastian Bergmann.
+     [exec] 
+     [exec] 0.00% duplicated lines out of 15 total lines of code.
+     [exec] 
+     [exec] Time: 10 ms, Memory: 2.00Mb
+
+phpdox:
+     [exec] phpDox 0.8.2-dev - Copyright (C) 2010 - 2016 by Arne Blankerts
+     [exec] 
+     [exec] Option "file build/phpdox/phpdox.xml" is not defined
+     [exec] 
+     [exec] Usage: phpdox [switches]
+     [exec] 
+     [exec]   -f, --file       Configuration file to use (defaults to ./phpdox.xml[.dist])
+     [exec] 
+     [exec]   -h, --help       Prints this usage information
+     [exec]   -v, --version    Prints the version and exits
+     [exec] 
+     [exec]   -c, --collector  Run only collector process
+     [exec]   -g, --generator  Run only generator process
+     [exec] 
+     [exec]       --backends   Show a list of available backends and exit
+     [exec]       --engines    Show a list of available output engines and exit
+     [exec]       --enrichers  Show a list of available output enrichers and exit
+     [exec] 
+     [exec]       --skel       Show an annotated skeleton config xml file and exit
+     [exec]       --strip      Strip comments from skeleton config xml when showing
+     [exec] 
+     [exec] Result: 3
+
+REPORT:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+[htmlpublisher] Archiving HTML reports...
+No GitLab connection configured
+Finished: SUCCESS

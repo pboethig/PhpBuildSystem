@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: Eric
+Build-Jdk: 1.7.0_65
+Extension-Name: plot
+Implementation-Title: plot
+Implementation-Version: 1.9
+Group-Id: org.jenkins-ci.plugins
+Short-Name: plot
+Long-Name: Plot plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Plot+Plugin
+Plugin-Version: 1.9
+Hudson-Version: 1.532.1
+Jenkins-Version: 1.532.1
+Plugin-Developers: Nigel Daley:nidaley:,Eric Nielsen:ericbn:
+

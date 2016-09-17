@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: sue445
+Build-Jdk: 1.7.0-u10-b09
+Extension-Name: gitlab-logo
+Specification-Title: Display GitLab Repository Icon on dashboard
+Implementation-Title: gitlab-logo
+Implementation-Version: 1.0.1
+Group-Id: org.jenkins-ci.plugins
+Short-Name: gitlab-logo
+Long-Name: GitLab Logo Plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Gitlab+Logo+Plugin
+Plugin-Version: 1.0.1
+Hudson-Version: 1.580.1
+Jenkins-Version: 1.580.1
+Plugin-Developers: sue445:sue445:sue445@sue445.net
+

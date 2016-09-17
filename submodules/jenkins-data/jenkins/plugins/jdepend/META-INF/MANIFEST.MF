@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: nicolas
+Build-Jdk: 1.7.0_67
+Extension-Name: jdepend
+Specification-Title: A Jenkins plugin that uses JDepend to generate me
+ trics.
+Implementation-Title: jdepend
+Implementation-Version: 1.2.4
+Group-Id: org.jenkins-ci.plugins
+Short-Name: jdepend
+Long-Name: Jenkins JDepend Plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/JDepend+Plugin
+Plugin-Version: 1.2.4
+Hudson-Version: 1.532
+Jenkins-Version: 1.532
+Plugin-Developers: Chris Lewis:cflewis:chris@cflewis.com
+

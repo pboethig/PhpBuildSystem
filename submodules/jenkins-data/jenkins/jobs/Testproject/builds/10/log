@@ -1,0 +1,24 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/Testproject
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git # timeout=10
+Fetching upstream changes from http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username gitlabadmin # timeout=10
+ > git config --local credential.helper store --file=/tmp/git1013744545119015838.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision cc5c4ed84fb22e375e327659574875f02808aa9c (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f cc5c4ed84fb22e375e327659574875f02808aa9c
+ > git rev-list cc5c4ed84fb22e375e327659574875f02808aa9c # timeout=10
+[Testproject] $ /bin/sh -xe /tmp/hudson5579376542847889564.sh
++ composer install
+/tmp/hudson5579376542847889564.sh: 3: /tmp/hudson5579376542847889564.sh: composer: not found
+Build step 'Execute shell' marked build as failure
+[CHECKSTYLE] Skipping publisher since build result is FAILURE
+Finished: FAILURE

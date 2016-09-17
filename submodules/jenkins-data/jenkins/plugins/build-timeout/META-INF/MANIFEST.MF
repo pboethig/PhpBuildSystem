@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: ikedam
+Build-Jdk: 1.7.0_79
+Extension-Name: build-timeout
+Specification-Title: Aborts a build if it's taking too long
+Implementation-Title: build-timeout
+Implementation-Version: 1.17.1
+Group-Id: org.jenkins-ci.plugins
+Short-Name: build-timeout
+Long-Name: Jenkins build timeout plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Build-timeout+Plugin
+Plugin-Version: 1.17.1
+Hudson-Version: 1.466
+Jenkins-Version: 1.466
+Plugin-Dependencies: naginator:1.16;resolution:=optional,token-macro:1
+ .5.1
+Plugin-Developers: 
+

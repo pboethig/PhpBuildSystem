@@ -1,0 +1,100 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>1.532</version>
+  </parent>
+  
+  <artifactId>jdepend</artifactId>
+  <packaging>hpi</packaging>
+  <version>1.2.4</version>
+  
+  <name>Jenkins JDepend Plugin</name>
+  <description>A Jenkins plugin that uses JDepend to generate metrics.</description>
+  <inceptionYear>2009</inceptionYear>
+  <url>http://wiki.jenkins-ci.org/display/JENKINS/JDepend+Plugin</url>
+  
+  <licenses>
+      <license>
+          <name>BSD</name>
+          <url>http://www.clarkware.com/software/license.txt</url>
+          <comments>License from Clarkware for JDepend.</comments>
+      </license>
+      <license>
+          <name>Apache License 2.0</name>
+          <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+          <comments>License for editing and use of JDepend Maven Plugin from Codehaus.</comments>
+      </license>
+      <license>
+          <name>BSD</name>
+          <url>http://creativecommons.org/licenses/BSD/</url>
+          <distribution>repo</distribution>
+          <comments>License from University of California, Santa Cruz for Hudson plugin.</comments>
+      </license>
+  </licenses>
+  <developers>
+      <developer>
+          <id>cflewis</id>
+          <name>Chris Lewis</name>
+          <email>chris@cflewis.com</email>
+          <url>http://cflewis.com</url>
+          <organization>University of California, Santa Cruz</organization>
+          <organizationUrl>http://eis.ucsc.edu</organizationUrl>
+          <roles>
+              <role>Developer</role>
+          </roles>
+          <timezone>-8</timezone>
+      </developer>
+  </developers>
+  <issueManagement>
+      <system>GitHub</system>
+      <url>http://github.com/Lewisham/JDepend-Hudson-Plugin/issues</url>
+  </issueManagement>
+  <dependencies>
+      <dependency>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>jdepend-maven-plugin</artifactId>
+          <version>2.0-beta-2</version>
+      </dependency>
+      <dependency>
+          <groupId>jdepend</groupId>
+          <artifactId>jdepend</artifactId>
+          <version>2.9.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven.doxia</groupId>
+        <artifactId>doxia-core</artifactId>
+        <version>1.1.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.maven.doxia</groupId>
+        <artifactId>doxia-module-xhtml</artifactId>
+        <version>1.1.1</version>
+      </dependency>
+  </dependencies>
+
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <scm>
+        <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
+        <url>http://github.com/jenkinsci/${project.artifactId}-plugin</url>
+      <tag>jdepend-1.2.4</tag>
+  </scm>
+</project>  
+  
+
+  

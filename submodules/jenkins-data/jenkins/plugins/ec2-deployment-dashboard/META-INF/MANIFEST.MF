@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: marcelbirkner
+Build-Jdk: 1.8.0_31
+Extension-Name: ec2-deployment-dashboard
+Implementation-Title: ec2-deployment-dashboard
+Implementation-Version: 1.0.10
+Group-Id: org.jenkins-ci.plugins
+Short-Name: ec2-deployment-dashboard
+Long-Name: Deployment Dashboard Plugin for Jenkins
+Url: http://wiki.jenkins-ci.org/display/JENKINS/EC2+Deployment+Dashboa
+ rd+Plugin
+Plugin-Version: 1.0.10
+Hudson-Version: 1.570
+Jenkins-Version: 1.570
+Plugin-Dependencies: credentials:1.16,cloudbees-credentials:3.3
+Plugin-Developers: Miel Donkers:mdonkers:miel.donkers@codecentric.nl,M
+ arcel Birkner:marcelbirkner:marcel.birkner@codecentric.de,Andreas Hou
+ ben:guysbert:andreas.houben@codecentric.de
+

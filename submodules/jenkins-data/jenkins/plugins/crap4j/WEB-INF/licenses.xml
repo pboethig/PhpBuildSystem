@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<l:dependencies xmlns:l='licenses' groupId='org.jenkins-ci.plugins' artifactId='crap4j' version='0.9'><l:dependency name='Jenkins Crap4J plugin' groupId='org.jenkins-ci.plugins' artifactId='crap4j' version='0.9' url='https://wiki.jenkins-ci.org/display/JENKINS/Crap4J+Plugin'><l:description/></l:dependency><l:dependency name='jdom' groupId='jdom' artifactId='jdom' version='1.0' url=''><l:description/></l:dependency></l:dependencies>

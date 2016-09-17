@@ -1,0 +1,152 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>1.580.1</version>
+  </parent>
+  
+  <properties>
+    <findbugs-maven-plugin.version>3.0.1</findbugs-maven-plugin.version>
+    <findbugs.failOnError>true</findbugs.failOnError>
+    <workflow.version>1.4</workflow.version>
+  </properties>
+  
+  <licenses>
+    <license>
+      <name>The MIT License (MIT)</name>
+      <url>http://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <artifactId>htmlpublisher</artifactId>
+  <packaging>hpi</packaging>
+  <version>1.11</version>
+  <name>HTML Publisher plugin</name>
+  <url>http://wiki.jenkins-ci.org/display/JENKINS/HTML+Publisher+Plugin</url>
+  <developers>
+      <developer>
+          <id>mcrooney</id>
+          <name>Michael Rooney</name>
+      </developer>
+  </developers>
+
+  <scm>
+      <connection>scm:git:git://github.com/jenkinsci/htmlpublisher-plugin.git</connection>
+      <developerConnection>scm:git:git@github.com:jenkinsci/htmlpublisher-plugin.git</developerConnection>
+      <url>https://github.com/jenkinsci/htmlpublisher-plugin</url>
+    <tag>htmlpublisher-1.11</tag>
+  </scm>
+
+  <build>
+      <plugins>
+          <plugin>
+             <artifactId>maven-release-plugin</artifactId>
+             <version>2.5</version>
+             <configuration>
+                 <goals>deploy</goals>
+             </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>findbugs-maven-plugin</artifactId>
+            <version>${findbugs-maven-plugin.version}</version>
+            <configuration>
+              <xmlOutput>true</xmlOutput>
+              <findbugsXmlWithMessages>true</findbugsXmlWithMessages>
+              <failOnError>${findbugs.failOnError}</failOnError>
+              <omitVisitors>UnreadFields</omitVisitors>
+            </configuration>
+            <executions>
+              <execution>
+                <id>run-findbugs</id>
+                <phase>verify</phase> 
+                <goals>
+                  <goal>check</goal> 
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <!--TODO: Remove after the update to 1.594+-->
+          <!--Prevents a conflict with groovy-all package, which happens for the default 1.5-jenkins-1-->
+          <plugin>
+            <groupId>org.codehaus.gmaven</groupId>
+            <artifactId>gmaven-plugin</artifactId>
+                <version>1.5-jenkins-3</version>
+            <configuration>
+                <providerSelection>1.7</providerSelection>
+            </configuration>
+            <dependencies>
+                <dependency>
+                    <groupId>org.codehaus.gmaven.runtime</groupId>
+                    <artifactId>gmaven-runtime-1.7</artifactId>
+                    <version>1.3</version>
+                </dependency>
+            </dependencies>
+          </plugin>
+      </plugins>
+  </build>
+
+  <distributionManagement>
+      <repository>
+          <id>maven.jenkins-ci.org</id>
+          <url>http://maven.jenkins-ci.org:8081/content/repositories/releases/</url>
+      </repository>
+  </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>matrix-project</artifactId>
+            <version>1.0</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+          <groupId>org.jenkins-ci.plugins.workflow</groupId>
+          <artifactId>workflow-step-api</artifactId>
+          <version>${workflow.version}</version>
+        </dependency>
+        <dependency> <!-- Test framework -->
+          <groupId>org.jenkins-ci.plugins.workflow</groupId>
+          <artifactId>workflow-step-api</artifactId>
+          <version>${workflow.version}</version>
+          <classifier>tests</classifier>
+          <scope>test</scope>
+        </dependency>
+        <dependency> 
+          <groupId>org.jenkins-ci.plugins.workflow</groupId>
+          <artifactId>workflow-aggregator</artifactId>
+          <version>${workflow.version}</version>
+          <scope>test</scope>
+        </dependency>
+        <dependency>
+          <groupId>com.infradna.tool</groupId>
+          <artifactId>bridge-method-annotation</artifactId>
+          <version>1.14</version>
+          <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jenkins-ci</groupId>
+            <artifactId>annotation-indexer</artifactId>
+            <version>1.9</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>  
+  
+

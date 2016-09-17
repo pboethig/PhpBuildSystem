@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Created-By: 0.4.0
+Build-Ruby-Platform: java
+Build-Ruby-Version: 1.9.3
+Built-By: root
+Group-Id: org.jenkins-ci.plugins
+Short-Name: gitlab-hook
+Long-Name: Gitlab Hook Plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Gitlab+Hook+Plugin
+Plugin-Class: ruby.RubyPlugin
+Plugin-Version: 1.4.2
+Jenkins-Version: 1.596
+Plugin-Dependencies: ruby-runtime:0.12,git:2.0
+Bundle-Path: vendor/gems

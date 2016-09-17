@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: hafner
+Build-Jdk: 1.7.0_79
+Extension-Name: checkstyle
+Specification-Title: This plug-in generates the trend report for
+     Checkstyle, an open source static code analysis program.
+Implementation-Title: checkstyle
+Implementation-Version: 3.46
+Plugin-Class: hudson.plugins.checkstyle.CheckStylePlugin
+Group-Id: org.jvnet.hudson.plugins
+Short-Name: checkstyle
+Long-Name: Checkstyle Plug-in
+Url: http://wiki.jenkins-ci.org/x/GYCGAQ
+Plugin-Version: 3.46
+Hudson-Version: 1.596.1
+Jenkins-Version: 1.596.1
+Plugin-Dependencies: token-macro:1.10;resolution:=optional,dashboard-v
+ iew:2.9.4;resolution:=optional,maven-plugin:2.9,matrix-project:1.2.1,
+ analysis-core:1.77
+Plugin-Developers: Ulli Hafner:drulli:ullrich.hafner@gmail.com
+

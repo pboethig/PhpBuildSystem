@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: svanoort
+Build-Jdk: 1.8.0_60
+Extension-Name: pipeline-graph-analysis
+Specification-Title: The Jenkins Plugins Parent POM Project
+Implementation-Title: pipeline-graph-analysis
+Implementation-Version: 1.1
+Group-Id: org.jenkins-ci.plugins
+Short-Name: pipeline-graph-analysis
+Long-Name: Pipeline Graph Analysis Plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Graph+Analys
+ is+Plugin
+Plugin-Version: 1.1
+Hudson-Version: 1.642.3
+Jenkins-Version: 1.642.3
+Plugin-Dependencies: pipeline-stage-step:2.2,workflow-job:2.0,workflow
+ -api:2.2,workflow-step-api:2.1,pipeline-input-step:2.0,workflow-cps:2
+ .2,workflow-support:2.1
+Plugin-Developers: 
+Support-Dynamic-Loading: true
+

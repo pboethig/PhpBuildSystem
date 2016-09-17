@@ -1,52 +1,6 @@
 version: '2'
 
-services:
-  webserver:
-    build: 
-        context: .
-        dockerfile: lamp.dockerfile
-    ports:
-      - "8083:80"
-      - "443:443"
-      - "9000:9000"
-    volumes:
-      - ./www:/var/www
-      - ./sites:/etc/nginx/conf.d
-      - ./logs:/var/log/supervisor
-  mysql: 
-    image: mysql
-    ports:
-      - "3307:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: password
-
-  mongo:
-    image: mongo
-    ports:
-      - "27017:27017"
-
-  memcached:
-    image: memcached
-    ports:
-      - "11211:11211"
-
-  redis:
-    image: redis
-    ports:
-      - "6379:6379"
-
-  elasticsearch:
-    image: elasticsearch
-    ports:
-      - "9200:9200"
-      - "9300:9300"
-
-  rabbitmq:
-    image: rabbitmq:3.6.1-management
-    ports:
-      - "15672:15672"
-      - "5672:5672"    
-      
+services: 
   hub:
     image: elgalu/selenium
     ports:
@@ -140,6 +94,52 @@ services:
     - DB_PASS=password
     - DB_NAME=gitlabhq_production
     - DB_EXTENSION=pg_trgm
+
+  webserver:
+    build: 
+      context: .
+      dockerfile: lamp.dockerfile
+    ports:
+      - "8083:80"
+      - "443:443"
+      - "9000:9000"
+    volumes:
+      - ./www:/var/www
+      - ./sites:/etc/nginx/conf.d
+      - ./logs:/var/log/supervisor
+  mysql: 
+    image: mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  memcached:
+    image: memcached
+    ports:
+      - "11211:11211"
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+  elasticsearch:
+    image: elasticsearch
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  rabbitmq:
+    image: rabbitmq:3.6.1-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
 
   gitlab:
     restart: always
@@ -271,3 +271,7 @@ services:
     - OAUTH_AZURE_TENANT_ID=
 volumes:
   nexus-data: {}
+
+
+
+

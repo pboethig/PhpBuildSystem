@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: kohsuke
+Build-Jdk: 1.7.0_15
+Extension-Name: cloudbees-credentials
+Specification-Title: This plugin is used to manage credentials within 
+ Jenkins. This plugin is used by CloudBees plugins to access CloudBees
+  services.
+Implementation-Title: cloudbees-credentials
+Implementation-Version: 3.3
+Group-Id: com.cloudbees.jenkins.plugins
+Short-Name: cloudbees-credentials
+Long-Name: CloudBees Credentials Plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/CloudBees+Credentials
+ +Plugin
+Plugin-Version: 3.3
+Hudson-Version: 1.509
+Jenkins-Version: 1.509
+Plugin-Dependencies: credentials:1.3
+Plugin-Developers: 
+Support-Dynamic-Loading: true
+

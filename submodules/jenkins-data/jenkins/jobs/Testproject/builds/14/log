@@ -1,0 +1,37 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/Testproject
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git # timeout=10
+Fetching upstream changes from http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username gitlabadmin # timeout=10
+ > git config --local credential.helper store --file=/tmp/git4166337014734446373.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision ae89c980351799cb16f9ae0c70323fbdd9f75083 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ae89c980351799cb16f9ae0c70323fbdd9f75083
+ > git rev-list cc5c4ed84fb22e375e327659574875f02808aa9c # timeout=10
+[Testproject] $ /bin/sh -xe /tmp/hudson6189271538782191053.sh
++ /usr/local/bin/composer.phar install
+Loading composer repositories with package information
+Installing dependencies (including require-dev) from lock file
+Nothing to install or update
+Generating autoload files
++ sudo ant REPORT
+Buildfile: /var/lib/jenkins/workspace/Testproject/build.xml
+
+BUILD FAILED
+/var/lib/jenkins/workspace/Testproject/build.xml:21: The element type "mkdir" must be terminated by the matching end-tag "</mkdir>".
+
+Total time: 0 seconds
+Build step 'Execute shell' marked build as failure
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at PROJECT level /var/lib/jenkins/workspace/Testproject/build/htmlreports to /var/lib/jenkins/jobs/Testproject/htmlreports/HTML_Report
+ERROR: Specified HTML directory '/var/lib/jenkins/workspace/Testproject/build/htmlreports' does not exist.
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mNo GitLab connection configured
+Finished: FAILURE

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: Lindner
+Build-Jdk: 1.7.0_45
+Extension-Name: crap4j
+Implementation-Title: crap4j
+Implementation-Version: 0.9
+Group-Id: org.jenkins-ci.plugins
+Short-Name: crap4j
+Long-Name: Jenkins Crap4J plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/Crap4J+Plugin
+Plugin-Version: 0.9
+Hudson-Version: 1.566
+Jenkins-Version: 1.566
+Plugin-Developers: Daniel Lindner:dlindner:
+

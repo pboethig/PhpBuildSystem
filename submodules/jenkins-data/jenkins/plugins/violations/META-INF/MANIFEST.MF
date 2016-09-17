@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: kohsuke
+Build-Jdk: 1.6.0_20
+Extension-Name: violations
+Implementation-Title: violations
+Implementation-Version: 0.7.11
+Group-Id: org.jenkins-ci.plugins
+Short-Name: violations
+Long-Name: Jenkins Violations plugin
+Url: wiki.jenkins-ci.org/display/JENKINS/Violations
+Plugin-Version: 0.7.11
+Hudson-Version: 1.399
+Plugin-Dependencies: maven-plugin:1.399
+Plugin-Developers: Peter Reilly:peterkittreilly:
+

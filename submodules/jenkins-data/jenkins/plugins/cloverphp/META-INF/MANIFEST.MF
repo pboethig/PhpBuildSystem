@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: sogabe
+Build-Jdk: 1.8.0_66
+Extension-Name: cloverphp
+Implementation-Title: cloverphp
+Implementation-Version: 0.5
+Group-Id: org.jenkins-ci.plugins
+Short-Name: cloverphp
+Long-Name: Jenkins Clover PHP plugin
+Url: http://wiki.jenkins-ci.org/display/JENKINS/Clover+PHP+Plugin
+Plugin-Version: 0.5
+Hudson-Version: 1.596.2
+Jenkins-Version: 1.596.2
+Plugin-Dependencies: matrix-project:1.4.1
+Plugin-Developers: Seiji Sogabe:ssogabe:
+

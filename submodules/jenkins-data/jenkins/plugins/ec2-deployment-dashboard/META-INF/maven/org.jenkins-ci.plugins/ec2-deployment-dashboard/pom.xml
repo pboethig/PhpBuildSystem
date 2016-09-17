@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+
+<!-- The MIT License Copyright (c) 2012, codecentric Miel Donkers Permission 
+	is hereby granted, free of charge, to any person obtaining a copy of this 
+	software and associated documentation files (the "Software"), to deal in 
+	the Software without restriction, including without limitation the rights 
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell 
+	copies of the Software, and to permit persons to whom the Software is furnished 
+	to do so, subject to the following conditions: The above copyright notice 
+	and this permission notice shall be included in all copies or substantial 
+	portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY 
+	OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+	OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
+	IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+	DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+	ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+	DEALINGS IN THE SOFTWARE. -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.jenkins-ci.plugins</groupId>
+		<artifactId>plugin</artifactId>
+		<version>1.570</version>
+	</parent>
+
+	<artifactId>ec2-deployment-dashboard</artifactId>
+	<version>1.0.10</version>
+	<packaging>hpi</packaging>
+
+	<name>Deployment Dashboard Plugin for Jenkins</name>
+	<url>http://wiki.jenkins-ci.org/display/JENKINS/EC2+Deployment+Dashboard+Plugin</url>
+
+	<licenses>
+		<license>
+			<name>The MIT license</name>
+			<url>https://github.com/codecentric/jenkins-deployment-dashboard-plugin/raw/master/LICENSE.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>mdonkers</id>
+			<name>Miel Donkers</name>
+			<email>miel.donkers@codecentric.nl</email>
+		</developer>
+		<developer>
+			<id>marcelbirkner</id>
+			<name>Marcel Birkner</name>
+			<email>marcel.birkner@codecentric.de</email>
+		</developer>
+		<developer>
+			<id>guysbert</id>
+			<name>Andreas Houben</name>
+			<email>andreas.houben@codecentric.de</email>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:ssh://github.com/jenkinsci/ec2-deployment-dashboard.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/jenkinsci/ec2-deployment-dashboard.git</developerConnection>
+		<url>https://github.com/jenkinsci/ec2-deployment-dashboard</url>
+		<tag>ec2-deployment-dashboard-1.0.10</tag>
+	</scm>
+
+	<properties>
+		<!-- http://docs.codehaus.org/display/MAVENUSER/POM+Element+for+Source+File+Encoding -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<compileSource>1.7</compileSource>
+		<compileTarget>1.7</compileTarget>
+
+		<jersey.client.version>1.17.1</jersey.client.version>
+		<joda.time.version>2.4</joda.time.version>
+		<org.slf4j.version>1.7.7</org.slf4j.version>
+		<powermock.version>1.5.6</powermock.version>
+
+		<aws.java.sdk.version>1.9.24</aws.java.sdk.version>
+		<artifactory.client.version>0.15</artifactory.client.version>
+		<nexus.client.version>2.8.1-01</nexus.client.version>
+		<nexus.lucene.model.version>2.5.1-01</nexus.lucene.model.version>
+	</properties>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>${maven-clean-plugin.version}</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>${maven-compiler-plugin.version}</version>
+					<configuration>
+						<source>${compileSource}</source>
+						<target>${compileTarget}</target>
+						<showDeprecation>true</showDeprecation>
+						<showWarnings>true</showWarnings>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.4.2</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>1.8.1</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-client</artifactId>
+			<version>${jersey.client.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>${jersey.client.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-apache-client</artifactId>
+			<version>${jersey.client.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda.time.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>${org.slf4j.version}</version>
+		</dependency>
+
+		<!-- Used for AWS Integration -->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>${aws.java.sdk.version}</version>
+		</dependency>
+
+		<!-- Used for Nexus Integration -->
+		<dependency>
+			<groupId>org.sonatype.nexus</groupId>
+			<artifactId>nexus-client-core</artifactId>
+			<version>${nexus.client.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.thoughtworks.xstream</groupId>
+					<artifactId>xstream</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.sun.jersey</groupId>
+					<artifactId>jersey-client</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.sonatype.nexus.indexer-lucene</groupId>
+			<artifactId>nexus-indexer-lucene-model</artifactId>
+			<version>${nexus.lucene.model.version}</version>
+		</dependency>
+
+		<!-- Used for Artifactory Integration -->
+		<dependency>
+			<groupId>org.jfrog.artifactory.client</groupId>
+			<artifactId>artifactory-java-client-services</artifactId>
+			<version>${artifactory.client.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.cloudbees.jenkins.plugins</groupId>
+			<artifactId>cloudbees-credentials</artifactId>
+			<version>3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jenkins-ci.plugins</groupId>
+			<artifactId>credentials</artifactId>
+			<version>1.16</version>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>${powermock.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>${powermock.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<!-- Added Repositories to be able to build project on TravisCI -->
+	<repositories>
+		<repository>
+			<id>repo.jenkins-ci.org</id>
+			<url>http://repo.jenkins-ci.org/public/</url>
+		</repository>
+		<repository>
+			<id>sonatype-forge</id>
+			<url>https://repository.sonatype.org/content/groups/forge/</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>repo.jenkins-ci.org</id>
+			<url>http://repo.jenkins-ci.org/public/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+</project>

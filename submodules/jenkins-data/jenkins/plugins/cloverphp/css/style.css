@@ -1,0 +1,44 @@
+.coverage {
+    border-collapse: collapse;
+}
+
+.coverage th, .coverage tr, .coverage td {
+    border: 1px #a9a9a9 solid; 
+    padding: 5px 5px;
+}
+
+.data {
+    text-align: right;
+}
+
+/* Just a dash of the Clover Secret Sauce ;) */
+.emptygraph {
+    position: relative; /* IE is dumb */
+    width: 150px;
+    border: 1px solid #808080;
+    padding: 0px;
+    background-color: #808080;
+    height: 1.2em;
+    line-height: 1.2em;
+}
+
+.graph { 
+    position: relative; /* IE is dumb */
+    width: 150px;
+    border: 1px solid #808080;
+    padding: 0px; 
+    background-color: #ff9090;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.graph .bar {
+    display: block;
+    position: relative;
+    background: #80ff80;
+    text-align: center; 
+    color: #333; 
+    height: 1.2em; 
+    line-height: 1.2em;            
+}

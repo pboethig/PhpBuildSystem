@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>1.566</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+  
+  <name>Jenkins Crap4J plugin</name>
+  <groupId>org.jenkins-ci.plugins</groupId>
+  <artifactId>crap4j</artifactId>
+  <version>0.9</version>
+  <packaging>hpi</packaging>
+  <url>https://wiki.jenkins-ci.org/display/JENKINS/Crap4J+Plugin</url>
+  <developers>
+    <developer>
+      <id>dlindner</id>
+      <name>Daniel Lindner</name>
+    </developer>
+  </developers>
+  
+  <dependencies>
+    <dependency>
+      <groupId>jdom</groupId>
+      <artifactId>jdom</artifactId>
+      <version>1.0</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.3.1</version>
+      <scope>test</scope>
+    </dependency>   
+  </dependencies>
+
+<!-- Necessary to avoid test failures.
+     See also http://stackoverflow.com/questions/20611211/jenkins-plugin-build-error
+     and https://issues.jenkins-ci.org/browse/JENKINS-21977
+-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>InjectedTest.java</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>http://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <scm>
+        <connection>scm:git:ssh://github.com/jenkinsci/crap4j-plugin.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/jenkinsci/crap4j-plugin.git</developerConnection>
+        <url>https://github.com/jenkinsci/crap4j-plugin</url>
+    </scm>
+</project>  
+  
+

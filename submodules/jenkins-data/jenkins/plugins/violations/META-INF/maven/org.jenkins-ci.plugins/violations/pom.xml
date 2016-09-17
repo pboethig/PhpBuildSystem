@@ -1,0 +1,126 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>1.399</version>
+    <relativePath />
+  </parent>
+
+  <artifactId>violations</artifactId>
+  <version>0.7.11</version>
+  <packaging>hpi</packaging>
+
+  <name>Jenkins Violations plugin</name>
+  <url>wiki.jenkins-ci.org/display/JENKINS/Violations</url>
+
+  <scm>
+    <connection>scm:git:git://github.com/jenkinsci/violations-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:jenkinsci/violations-plugin.git</developerConnection>
+  </scm>
+
+  <properties>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <issueManagement>
+    <system>JIRA</system>
+    <url>http://issues.jenkins-ci.org/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project+%3D+JENKINS+AND+status+in+%28Open%2C+%22In+Progress%22%2C+Reopened%29+AND+component+%3D+%27violations%27</url>
+  </issueManagement>
+
+  <developers>
+    <developer>
+      <id>peterkittreilly</id>
+      <name>Peter Reilly</name>
+    </developer>
+  </developers>
+
+  <contributors>
+    <contributor>
+      <name>Mathias Kluba</name>
+        <email>mathias.kluba@gmail.com</email>
+        <url>http://grozeille.com</url>
+      </contributor>
+    <contributor>
+        <name>Cliffano Subagio</name>
+        <email>blah@cliffano.com</email>
+        <timezone>+10</timezone>
+    </contributor>
+    <contributor>
+      <name>Mirko Friedenhagen</name>
+      <email>mfriedenhagen@gmail.com</email>
+      <timezone>+1</timezone>
+    </contributor>
+  </contributors>
+ 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>1.2</version>
+        <configuration>
+           <findbugsXmlOutput>true</findbugsXmlOutput>
+           <xmlOutput>false</xmlOutput>
+        </configuration>
+     </plugin>
+    </plugins>
+  </build>
+ 
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <version>1.2</version>
+        <configuration>
+           <findbugsXmlOutput>true</findbugsXmlOutput>
+           <xmlOutput>false</xmlOutput>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-checkstyle-plugin</artifactId>
+        <configuration>
+          <configLocation>${basedir}/src/checkstyle/checkstyle.xml</configLocation>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.jenkins-ci.main</groupId>
+      <artifactId>maven-plugin</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>xpp3</groupId>
+      <artifactId>xpp3</artifactId>
+      <version>1.1.3.3</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.8.2</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <repositories>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>http://repo.jenkins-ci.org/public/</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org</id>
+      <url>http://repo.jenkins-ci.org/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+</project>

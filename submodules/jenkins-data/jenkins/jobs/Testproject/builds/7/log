@@ -1,0 +1,35 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/Testproject
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git # timeout=10
+Fetching upstream changes from http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username gitlabadmin # timeout=10
+ > git config --local credential.helper store --file=/tmp/git1286076562077229584.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress http://dockergitlab_gitlab_1/gitlabadmin/testproject2.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision fa77e49a55b47de7ea55b90cd6a4008f325b91ef (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fa77e49a55b47de7ea55b90cd6a4008f325b91ef
+ > git rev-list e0dbcf67a8c679c6db968b95860a834a0a5cdbdc # timeout=10
+[Testproject] $ ant REPORT
+Buildfile: /var/lib/jenkins/workspace/Testproject/build.xml
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0minit:
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mLint:
+    [apply] No syntax errors detected in /var/lib/jenkins/workspace/Testproject/src/Math.php
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQT6jNKU4P0+vJLE4u1gvPjGvRM8xryQksSg9tcQvvyTVvqNr/s+Vl9uYGBgqihikoKqT8/OK83NS9ZwhNEghAwQwghQWAADROOumXQAAAA==[0mPHPUnit:
+
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSGjNKU4P0+vJLE4u1gvPjGvRM8xr8S/tCQ5PzfVL78ktUuDM0uMry+HiYGhoohBCqo8OT+vOD8nVc8ZQoMUMkAAI0hhAQAUXUdTXgAAAA==[0mBUILD FAILED
+/var/lib/jenkins/workspace/Testproject/build.xml:89: /usrbin does not exist.
+
+Total time: 0 seconds
+Build step 'Invoke Ant' marked build as failure
+[CHECKSTYLE] Skipping publisher since build result is FAILURE
+Finished: FAILURE
