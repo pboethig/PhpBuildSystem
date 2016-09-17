@@ -1,5 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty_-DescriptorImpl plugin="gitlab-logo@1.0.1">
-  <privateToken>6DGyTVhvGs7ujXNsxcFz</privateToken>
-  <endpointUrl></endpointUrl>
-</org.jenkinsci.plugins.gitlablogo.GitlabLogoProperty_-DescriptorImpl>
